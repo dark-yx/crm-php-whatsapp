@@ -2,7 +2,11 @@
 
 Sistema de gestión de relaciones con clientes (CRM) desarrollado en PHP con integración de mensajería multiplataforma.
 
-## Desarrollado por
+## 🚀 Proyecto de Código Abierto
+
+Este es un proyecto de código abierto desarrollado inicialmente por Jonnathan P. y mantenido por la comunidad. Invitamos a todos los desarrolladores interesados a contribuir y mejorar el proyecto.
+
+## 👥 Desarrollado por
 
 **Jonnathan P.**
 - Empresa: WEBLIFETECH
@@ -12,7 +16,7 @@ Sistema de gestión de relaciones con clientes (CRM) desarrollado en PHP con int
 - GitHub: [dark-yx](https://github.com/dark-yx)
 - LinkedIn: [jonnathan-growth](https://linkedin.com/in/jonnathan-growth)
 
-## Características
+## 📋 Características
 
 - **Gestión de Usuarios**
   - Registro y autenticación
@@ -44,7 +48,47 @@ Sistema de gestión de relaciones con clientes (CRM) desarrollado en PHP con int
   - Plantillas de mensajes
   - Estadísticas y reportes
 
-## Estructura del Proyecto
+## 🔧 Configuración de Credenciales
+
+### 1. Base de Datos
+Crear un archivo `config/database.php` con las siguientes credenciales:
+```php
+$db_host = 'localhost';      // Host del servidor
+$db_name = 'crm_whatsapp';   // Nombre de la base de datos
+$db_user = 'tu_usuario';     // Usuario de la base de datos
+$db_pass = 'tu_contraseña';  // Contraseña del usuario
+```
+
+### 2. Integraciones
+Crear un archivo `config/integrations.php` con las siguientes credenciales:
+
+#### WhatsApp Business API
+```php
+define('WHATSAPP_PHONE_NUMBER_ID', 'tu_phone_number_id');
+define('WHATSAPP_ACCESS_TOKEN', 'tu_access_token');
+```
+
+#### Telegram Bot
+```php
+define('TELEGRAM_BOT_TOKEN', 'tu_bot_token');
+```
+
+#### Instagram Graph API
+```php
+define('INSTAGRAM_ACCESS_TOKEN', 'tu_access_token');
+```
+
+#### Facebook Messenger
+```php
+define('MESSENGER_PAGE_TOKEN', 'tu_page_token');
+```
+
+#### OpenAI
+```php
+define('OPENAI_API_KEY', 'tu_api_key');
+```
+
+## 📁 Estructura del Proyecto
 
 ```
 crm-php-whatsapp/
@@ -62,7 +106,8 @@ crm-php-whatsapp/
 │   └── img/              # Imágenes
 │
 ├── config/               # Archivos de configuración
-│   └── integrations.php  # Configuración de APIs
+│   ├── database.php     # Configuración de base de datos
+│   └── integrations.php # Configuración de APIs
 │
 ├── includes/            # Archivos incluidos
 │   ├── functions.php    # Funciones auxiliares
@@ -93,15 +138,7 @@ crm-php-whatsapp/
 └── reset-password.php  # Restablecimiento de contraseña
 ```
 
-## Requisitos
-
-- PHP 7.4 o superior
-- MySQL 5.7 o superior
-- Servidor web (Apache/Nginx)
-- Composer (para dependencias PHP)
-- Node.js y npm (para dependencias frontend)
-
-## Instalación
+## 🛠️ Instalación
 
 1. Clonar el repositorio:
 ```bash
@@ -123,42 +160,64 @@ cd crm-php-whatsapp
 - Asegurar que mod_rewrite esté habilitado (Apache)
 - Configurar las reglas de reescritura si es necesario
 
-## Uso
+## 🤝 Contribución
 
-1. Acceder al sistema:
-- URL: `http://localhost/crm-php-whatsapp`
-- Usuario por defecto: admin@example.com
-- Contraseña por defecto: admin123
+### Cómo Contribuir
 
-2. Configurar las integraciones:
-- Ir a Configuración > Integraciones
-- Configurar cada plataforma de mensajería
+1. **Fork del Proyecto**
+   - Haz fork del repositorio en GitHub
+   - Clona tu fork localmente
 
-3. Gestionar contactos:
-- Ir a Contactos
-- Agregar, editar o eliminar contactos
+2. **Crear una Rama**
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
 
-4. Gestionar conversaciones:
-- Ir a Inbox
-- Responder mensajes de los clientes
+3. **Hacer Cambios**
+   - Desarrolla tu funcionalidad
+   - Sigue las guías de estilo
+   - Escribe pruebas si es posible
 
-## Contribución
+4. **Commit y Push**
+   ```bash
+   git add .
+   git commit -m "Descripción clara de los cambios"
+   git push origin feature/nueva-funcionalidad
+   ```
 
-1. Hacer fork del proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Hacer commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Hacer push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir un Pull Request
+5. **Pull Request**
+   - Abre un Pull Request en GitHub
+   - Describe los cambios realizados
+   - Espera la revisión
 
-## Licencia
+### Guías de Estilo
+
+- Usar PSR-12 para PHP
+- Documentar el código con PHPDoc
+- Seguir las convenciones de nombres
+- Escribir pruebas unitarias
+- Mantener el código limpio y organizado
+
+### Issues y Mejoras
+
+- Reportar bugs en Issues
+- Proponer nuevas características
+- Ayudar a otros desarrolladores
+- Mejorar la documentación
+
+## 📝 Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-## Contacto
+## 📞 Contacto
 
 Para cualquier consulta o colaboración, puedes contactarme a través de:
 - Email: yosue@weblifetech.com
 - Twitter: [@jonnathan.growth](https://twitter.com/jonnathan.growth)
 - LinkedIn: [jonnathan-growth](https://linkedin.com/in/jonnathan-growth)
 
-Link del Proyecto: [https://github.com/dark-yx/crm-php-whatsapp](https://github.com/dark-yx/crm-php-whatsapp) 
+Link del Proyecto: [https://github.com/dark-yx/crm-php-whatsapp](https://github.com/dark-yx/crm-php-whatsapp)
+
+## 🙏 Agradecimientos
+
+Gracias a todos los contribuidores que ayudan a mejorar este proyecto. Tu participación es valiosa para hacer este CRM cada vez mejor. 
