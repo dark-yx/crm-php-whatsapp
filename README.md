@@ -1,6 +1,16 @@
-# CRM WhatsApp
+# CRM PHP WhatsApp
 
-Sistema de gestión de relaciones con clientes (CRM) con integración de mensajería multiplataforma.
+Sistema de gestión de relaciones con clientes (CRM) desarrollado en PHP con integración de mensajería multiplataforma.
+
+## Desarrollado por
+
+**Jonnathan P.**
+- Empresa: WEBLIFETECH
+- Email: yosue@weblifetech.com
+- Twitter: [@jonnathan.growth](https://twitter.com/jonnathan.growth)
+- Instagram: [@jonnathan.growth](https://instagram.com/jonnathan.growth)
+- GitHub: [dark-yx](https://github.com/dark-yx)
+- LinkedIn: [jonnathan-growth](https://linkedin.com/in/jonnathan-growth)
 
 ## Características
 
@@ -28,8 +38,8 @@ Sistema de gestión de relaciones con clientes (CRM) con integración de mensaje
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/crm-whatsapp.git
-cd crm-whatsapp
+git clone https://github.com/dark-yx/crm-php-whatsapp.git
+cd crm-php-whatsapp
 ```
 
 2. Instalar dependencias PHP:
@@ -62,7 +72,7 @@ php database/init.php
 ## Uso
 
 1. Acceder al sistema:
-- URL: `http://localhost/crm-whatsapp`
+- URL: `http://localhost/crm-php-whatsapp`
 - Usuario por defecto: admin@example.com
 - Contraseña por defecto: admin123
 
@@ -81,7 +91,7 @@ php database/init.php
 ## Estructura del Proyecto
 
 ```
-crm-whatsapp/
+crm-php-whatsapp/
 ├── api/                 # Endpoints de la API
 ├── assets/             # Recursos estáticos
 │   ├── css/           # Estilos CSS
@@ -108,6 +118,9 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## Contacto
 
-Tu Nombre - [@tutwitter](https://twitter.com/tutwitter) - email@ejemplo.com
+Para cualquier consulta o colaboración, puedes contactarme a través de:
+- Email: yosue@weblifetech.com
+- Twitter: [@jonnathan.growth](https://twitter.com/jonnathan.growth)
+- LinkedIn: [jonnathan-growth](https://linkedin.com/in/jonnathan-growth)
 
-Link del Proyecto: [https://github.com/tu-usuario/crm-whatsapp](https://github.com/tu-usuario/crm-whatsapp) 
+Link del Proyecto: [https://github.com/dark-yx/crm-php-whatsapp](https://github.com/dark-yx/crm-php-whatsapp) 
