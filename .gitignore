@@ -1,34 +1,59 @@
-# Archivos de configuración sensibles
-config/database.php
+# Dependencias
+/vendor/
+/node_modules/
+
+# Archivos de entorno
 .env
+.env.local
+.env.*.local
+
+# Archivos de configuración local
+config/local.php
+config/database.local.php
+
+# Archivos de caché y logs
+/storage/logs/*
+/storage/cache/*
+!storage/logs/.gitkeep
+!storage/cache/.gitkeep
+
+# Archivos de sesión
+/storage/sessions/*
+
+# Archivos de uploads
+/storage/uploads/*
+!storage/uploads/.gitkeep
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
 
 # Archivos de sistema
 .DS_Store
 Thumbs.db
 
-# Archivos de IDE
-.idea/
-.vscode/
+# Archivos de compilación
+/public/assets/dist/
+/public/assets/build/
+
+# Archivos de prueba
+/tests/tmp/
+/tests/logs/
+
+# Archivos de documentación generados
+/docs/_build/
+/docs/_static/
+
+# Archivos de backup
+*.bak
+*.backup
 *.swp
 *.swo
 
-# Archivos de dependencias
-vendor/
-node_modules/
-
-# Archivos de logs
-*.log
-logs/
-
-# Archivos temporales
-*.tmp
-*.temp
-cache/
-temp/
-
-# Archivos de sesión
-sessions/
-*.session
-
-# Archivos de caché
-*.cache 
+# Archivos de certificados
+*.pem
+*.key
+*.crt
+*.csr 
