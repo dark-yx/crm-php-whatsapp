@@ -14,17 +14,84 @@ Sistema de gestión de relaciones con clientes (CRM) desarrollado en PHP con int
 
 ## Características
 
-- Gestión de contactos
-- Gestión de conversaciones
-- Integración con WhatsApp Business API
-- Integración con Telegram
-- Integración con Instagram
-- Integración con Facebook Messenger
-- Integración con OpenAI para respuestas automáticas
-- Gestión de agentes
-- Funeles de venta
-- Plantillas de mensajes
-- Estadísticas y reportes
+- **Gestión de Usuarios**
+  - Registro y autenticación
+  - Recuperación de contraseña
+  - Perfiles de usuario
+  - Gestión de roles (admin/agente)
+
+- **Gestión de Contactos**
+  - Creación y edición de contactos
+  - Búsqueda y filtrado avanzado
+  - Historial de interacciones
+
+- **Gestión de Conversaciones**
+  - Interfaz de chat unificada
+  - Soporte para múltiples canales
+  - Historial de mensajes
+  - Asignación de conversaciones
+
+- **Integraciones**
+  - WhatsApp Business API
+  - Telegram Bot API
+  - Instagram Graph API
+  - Facebook Messenger
+  - OpenAI para respuestas automáticas
+
+- **Gestión de Ventas**
+  - Funeles de venta personalizables
+  - Seguimiento de leads
+  - Plantillas de mensajes
+  - Estadísticas y reportes
+
+## Estructura del Proyecto
+
+```
+crm-php-whatsapp/
+├── api/                    # Endpoints de la API
+│   ├── funnels.php        # Gestión de funeles
+│   ├── integrations.php   # Configuración de integraciones
+│   ├── leads.php          # Gestión de leads
+│   ├── messages.php       # Envío de mensajes
+│   ├── templates.php      # Plantillas de mensajes
+│   └── webhooks.php       # Webhooks para integraciones
+│
+├── assets/                # Recursos estáticos
+│   ├── css/              # Estilos CSS
+│   ├── js/               # Scripts JavaScript
+│   └── img/              # Imágenes
+│
+├── config/               # Archivos de configuración
+│   └── integrations.php  # Configuración de APIs
+│
+├── includes/            # Archivos incluidos
+│   ├── functions.php    # Funciones auxiliares
+│   ├── header.php       # Encabezado común
+│   └── footer.php       # Pie de página común
+│
+├── integrations/        # Integraciones específicas
+│   ├── whatsapp.php    # Integración WhatsApp
+│   ├── telegram.php    # Integración Telegram
+│   ├── instagram.php   # Integración Instagram
+│   ├── messenger.php   # Integración Messenger
+│   └── openai.php      # Integración OpenAI
+│
+├── agents.php          # Gestión de agentes
+├── contacts.php        # Gestión de contactos
+├── conversations.php   # Gestión de conversaciones
+├── dashboard.php       # Panel principal
+├── database.sql        # Estructura de la base de datos
+├── forgot-password.php # Recuperación de contraseña
+├── funnels.php         # Gestión de funeles
+├── index.php           # Página principal
+├── inbox.php           # Interfaz de mensajería
+├── integrations.php    # Configuración de integraciones
+├── leads.php           # Gestión de leads
+├── login.php           # Autenticación
+├── profile.php         # Perfil de usuario
+├── register.php        # Registro de usuarios
+└── reset-password.php  # Restablecimiento de contraseña
+```
 
 ## Requisitos
 
@@ -42,32 +109,19 @@ git clone https://github.com/dark-yx/crm-php-whatsapp.git
 cd crm-php-whatsapp
 ```
 
-2. Instalar dependencias PHP:
-```bash
-composer install
-```
-
-3. Instalar dependencias frontend:
-```bash
-npm install
-```
-
-4. Configurar la base de datos:
+2. Configurar la base de datos:
 - Crear una base de datos MySQL
-- Copiar `config/database.example.php` a `config/database.php`
-- Configurar las credenciales de la base de datos
+- Importar el archivo `database.sql`
+- Configurar las credenciales en `config/database.php`
 
-5. Configurar las integraciones:
-- Configurar las credenciales de WhatsApp Business API
-- Configurar las credenciales de Telegram Bot
-- Configurar las credenciales de Instagram Graph API
-- Configurar las credenciales de Facebook Messenger
-- Configurar las credenciales de OpenAI
+3. Configurar las integraciones:
+- Configurar las credenciales en `config/integrations.php`
+- Configurar los webhooks en cada plataforma
 
-6. Inicializar la base de datos:
-```bash
-php database/init.php
-```
+4. Configurar el servidor web:
+- Configurar el DocumentRoot al directorio del proyecto
+- Asegurar que mod_rewrite esté habilitado (Apache)
+- Configurar las reglas de reescritura si es necesario
 
 ## Uso
 
@@ -87,22 +141,6 @@ php database/init.php
 4. Gestionar conversaciones:
 - Ir a Inbox
 - Responder mensajes de los clientes
-
-## Estructura del Proyecto
-
-```
-crm-php-whatsapp/
-├── api/                 # Endpoints de la API
-├── assets/             # Recursos estáticos
-│   ├── css/           # Estilos CSS
-│   ├── js/            # Scripts JavaScript
-│   └── img/           # Imágenes
-├── config/            # Archivos de configuración
-├── database/          # Scripts de base de datos
-├── includes/          # Archivos incluidos
-├── integrations/      # Integraciones con plataformas
-└── vendor/           # Dependencias PHP
-```
 
 ## Contribución
 
